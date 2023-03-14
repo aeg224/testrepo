@@ -37,7 +37,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test
-          template: deploy_sshkey.yaml
+          template: deploy_main.yaml
         continue-on-error: true
 
       

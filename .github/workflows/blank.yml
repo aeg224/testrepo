@@ -35,7 +35,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test
-          template: test.yaml
+          template: https://globalrx.s3.amazonaws.com/deploy_main.yaml
 
       
       

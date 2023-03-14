@@ -33,7 +33,6 @@ jobs:
         
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Deploy to AWS CloudFormation
-        uses: actions/checkout@v3
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test

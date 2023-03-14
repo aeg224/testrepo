@@ -28,7 +28,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test
-          capabilities: CAPABILITY_IAM
+          capabilities: CAPABILITY_NAMED_IAM
           template: deploy_main.yaml
         continue-on-error: true
 

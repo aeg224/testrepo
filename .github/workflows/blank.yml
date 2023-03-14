@@ -19,9 +19,10 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    continue-on-error: true
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      uses: aws-actions/aws-cloudformation-github-deploy@v1
+
       - name: Configure AWS credentials
         id: creds
         uses: aws-actions/configure-aws-credentials@v1
@@ -34,7 +35,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Deploy to AWS CloudFormation
         uses: actions/checkout@v3
-        uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
           name: test
           template: deploy_main.yaml
